@@ -1,0 +1,10 @@
+<div class="page-area">
+    <h2>About-us</h2>
+    <input type="text" placeholder="input value" #val>
+    <button btn-btn-primary (click)="onSubmit(val)">Submit Value</button>
+    <app-ang-com1 *ngIf="comp1Exist" [myValue]="value"> <br> <br>
+        ngContent: {{value}}</app-ang-com1>
+        <br>
+        <br>
+        <button (click)="Destroy()" class="btn btn-danger">Destroy Component</button>
+</div>
