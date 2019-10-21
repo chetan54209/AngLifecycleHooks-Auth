@@ -11,14 +11,13 @@ const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-
+  { path: 'about-us', component: AboutUsComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'dashboard/:id', component: DashboardComponent,
-  children: [
-    // { path: '', redirectTo: 'about-us', pathMatch: 'full' },
-    { path: 'about-us', component: AboutUsComponent },
-  ]
-},
+  { path: 'dashboard/:id', component: DashboardComponent},
+  // children: [
+  //   { path: '', redirectTo: 'about-us', pathMatch: 'full' },
+  //   { path: 'about-us', component: AboutUsComponent },
+  // ]
  // otherwise redirect to home
  { path: '**', redirectTo: '' }
 ];
