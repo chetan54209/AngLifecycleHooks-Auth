@@ -17,6 +17,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AlertComponent } from './_components/alert/alert.component';
+import { FormsModule } from './forms/forms.module';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,9 @@ import { AlertComponent } from './_components/alert/alert.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
